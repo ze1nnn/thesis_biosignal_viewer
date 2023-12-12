@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Upload</title>
+</head>
+<body>
+    <h1>Upload a Patient's Test Datafile</h1>
+    <form method="POST" action="/upload" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".edf,.mat,.csv">
+        <input type="submit" value="Upload and Visualize">
+    </form>
+</body>
+</html>

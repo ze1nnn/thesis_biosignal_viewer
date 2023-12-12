@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Add this in the <head> section -->
+    
+    <title>Plot</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+        var jsonData = {{ data_json|tojson|safe }};
+        
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.6/fabric.min.js"></script>
+
+    
+</head>
+<body>
+    <h1>Plot</h1>
+    <!----<div id="eeg-plot">{{ plot|safe }}</div>--->
+    <div id="myDiv"></div>
+        
+    
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+    <button id="start-annotation-btn" style="margin-right: 10px; background-color: rgba(133, 193, 233 ); color: black;">Add Note</button>
+    <form method="GET" action="/" class="form-inline" style="margin: 0;">
+        <input type="submit" value="Upload new file" style="background-color: rgba(133, 193, 233 ); color: black">
+    </form>
+    </div>
+
+    <!--<button id="start-drawing-btn">Start Paint</button>-->
+    <!--<div><canvas id="myCanvas" width="500" height="300"></canvas></div>-->
+    <script src="/static/eeg_js.js"></script>
+
+      
+
+</body>
+</html>
